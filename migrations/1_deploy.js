@@ -39,7 +39,7 @@ async function deployTokenCrowdsale(deployer, token) {
     let maxCap = 4000000000 * 10 ** 6;
     let goal = 800000000 * 10 ** 6;
     let tokenWallet = owner;
-75    console.log("Deploying Token Crowdsale:");
+    console.log("Deploying Token Crowdsale:");
     console.log("\tRate                 \t: %s", rate);
     console.log("\tWallet               \t: %s", wallet);
     console.log("\tOpening Time         \t: %s", openingTime);
