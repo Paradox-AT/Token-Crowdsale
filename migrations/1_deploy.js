@@ -32,12 +32,12 @@ async function deployToken(deployer) {
 async function deployTokenCrowdsale(deployer, token) {
     let rate = 1;
     let wallet = owner;
-    let openingTime = Math.floor((new Date()).getTime() / 1000);
-    let closingTime = openingTime + (1 * 60 * 60 * 24)*(1.75);
-    let cap = 4000000000 * 10 ** 6;
+    let openingTime = (new Date("2018-10-12T19:30:00")).getTime() / 1000;
+    let closingTime = (new Date("2018-10-12T20:00:00")).getTime() / 1000;
+    let cap = 4000000000 * 10 ** 9;
     let minCap = 1000;
-    let maxCap = 4000000000 * 10 ** 6;
-    let goal = 800000000 * 10 ** 6;
+    let maxCap = 4000000000 * 10 ** 9;
+    let goal = 800000000 * 10 ** 9;
     let tokenWallet = owner;
     console.log("Deploying Token Crowdsale:");
     console.log("\tRate                 \t: %s", rate);
@@ -57,7 +57,7 @@ async function deployTokenCrowdsale(deployer, token) {
 }
 
 async function init(token, crowdsale) {
-    let allowance = 4000000000 * 10 ** 6;
+    let allowance = 4000000000 * 10 ** 9;
 
     console.log("Minting and creating allowance for crowdsale contract.");
     console.log("Token address          \t: %s", token.address);
